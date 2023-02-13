@@ -2,7 +2,7 @@
 ###### US-EAST-2 ###############################################################
 ################################################################################
 module "kfdm" {
-  source              = "./modules/complete"
+  source              = "../modules/complete"
   aws_account_name    = "kfdm"
   project             = var.project
   project_description = var.project_description
