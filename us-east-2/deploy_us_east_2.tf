@@ -2,7 +2,7 @@
 ###### US-EAST-2 ###############################################################
 ################################################################################
 module "kfdm" {
-  source              = "../modules/complete"
+  source              = "../modules/proxies"
   aws_account_name    = "kfdm"
   project             = var.project
   project_description = var.project_description
@@ -11,7 +11,8 @@ module "kfdm" {
   github_owner        = var.github_owner
   github_team         = var.github_team
   github_branch       = var.github_branch
-  onprem_server      = "kfdm-mtn1.sbgnet.int"
+  archive_bucket      = "primary.library.news.kfdm.stations"
+  onprem_server       = "kfdm-mtn1.sbgnet.int"
   providers = {
     aws = aws.kfdm
   }

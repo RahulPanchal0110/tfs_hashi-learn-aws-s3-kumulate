@@ -28,10 +28,28 @@ resource "aws_iam_policy" "s3" {
         },
         {
             "Effect": "Allow",
-            "Action": "s3:*",
+            "Action": [
+                "s3:ListBucketMultipartUploads",
+                "s3:ListBucketVersions",
+                "s3:RestoreObject",
+                "s3:ListBucket",
+                "s3:GetBucketAcl",
+                "s3:GetBucketNotification",
+                "s3:ListMultipartUploadParts",
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:GetBucketAcl",
+                "s3:PutBucketNotification",
+                "s3:AbortMultipartUpload",
+                "s3:GetObjectTagging",
+                "s3:PutObjectTagging",
+                "s3:DeleteObject"
+            ],
             "Resource": [
                 "${module.proxies.s3_bucket_arn}",
                 "${module.proxies.s3_bucket_arn}/*",
+                "arn:aws:s3:::${var.archive_bucket}",
+                "arn:aws:s3:::${var.archive_bucket}/*",               
                 "arn:aws:s3:*:*:accesspoint/*",
                 "arn:aws:s3:::*/*",
                 "arn:aws:s3:*:*:job/*"

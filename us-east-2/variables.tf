@@ -25,7 +25,7 @@ variable "business_unit" {
 }
 variable "env" {
   description = "The environment. Values corresponding to the branch name"
-  default = "prod"
+  default     = "prod"
 }
 ## dev, stage, prod, qa (stands for sandbox or qa branch)
 
