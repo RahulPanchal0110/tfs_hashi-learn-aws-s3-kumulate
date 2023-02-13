@@ -6,7 +6,7 @@ module "proxies" {
   source  = "terraform-aws-modules/s3-bucket/aws"
   version = "3.5.0"
 
-  bucket = local.associated_resource_name
+  bucket = "proxies-${local.associated_resource_name}"
 
   acl = "private"
 

@@ -30,7 +30,7 @@ variable "github_branch" {
 }
 
 ############# Vantage Specific Variables 
-variable "vantage_server" {
+variable "onprem_server" {
   type        = string
   description = "Vantage Server FQDN"
 }

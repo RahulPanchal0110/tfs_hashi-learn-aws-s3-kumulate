@@ -1,23 +1,23 @@
-################################################################################
-######## AWS Authentication ####################################################
-################################################################################
-variable "aws_account_number" {
-  description = "AWS account number needed for TFE IAM role"
-}
+# ################################################################################
+# ######## AWS Authentication ####################################################
+# ################################################################################
+# variable "aws_account_number" {
+#   description = "AWS account number needed for TFE IAM role"
+# }
 ################################################################################
 ######## AWS Region ############################################################
 ################################################################################
 variable "aws_region" {
   description = "AWS region to launch servers."
 }
-################################################################################
-######## Project Variables #####################################################
-################################################################################
-###  <account name or station sign> - <aws account number> - <region> - <environment>
-variable "aws_account_short_name" {
-  description = "AWS account short name, profile or SBGTV Station Call Sign: all lowercase, no spaces"
-  # default     = "sandbox"
-}
+# ################################################################################
+# ######## Project Variables #####################################################
+# ################################################################################
+# ###  <account name or station sign> - <aws account number> - <region> - <environment>
+# variable "aws_account_short_name" {
+#   description = "AWS account short name, profile or SBGTV Station Call Sign: all lowercase, no spaces"
+#   # default     = "sandbox"
+# }
 variable "business_unit" {
   type        = string
   description = "Business Unit"
@@ -25,10 +25,15 @@ variable "business_unit" {
 }
 variable "env" {
   description = "The environment. Values corresponding to the branch name"
+  default = "prod"
 }
 ## dev, stage, prod, qa (stands for sandbox or qa branch)
 
 variable "project" {
+  default = "kumulate"
+}
+variable "project_description" {
+  default = "AWS Resources to support Telestream Kumulate on-prem servers"
 }
 variable "asset_owner" {
   type        = string
@@ -44,6 +49,7 @@ variable "asset_custodian" {
 ######### Git Variables ########################################################
 ################################################################################
 variable "github_repo" {
+  default = "tfs_sbgtv-aws-s3-kumulate"
 }
 variable "github_org" {
 }
