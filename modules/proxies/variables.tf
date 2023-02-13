@@ -1,8 +1,10 @@
+################################################################################
+######### Project Variables ####################################################
+################################################################################
 variable "aws_account_name" {
   type        = string
   description = "aws short account name / profile / station code"
 }
-
 variable "project" {
 }
 variable "project_description" {
@@ -28,8 +30,7 @@ variable "github_branch" {
   type        = string
   description = "GitHub Branch corresponding to Terraform Cloud Workspace"
 }
-
-############# Vantage Specific Variables 
+############# Vantage Specific Variables #######################################
 variable "onprem_server" {
   type        = string
   description = "Vantage Server FQDN"
@@ -38,3 +39,6 @@ variable "archive_bucket" {
   type = string
   description = "Existing S3 bucket for archives"
 }
+################################################################################
+################################################################################
+################################################################################
