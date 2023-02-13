@@ -34,3 +34,7 @@ variable "onprem_server" {
   type        = string
   description = "Vantage Server FQDN"
 }
+variable "archive_bucket" {
+  type = string
+  description = "Existing S3 bucket for archives"
+}
