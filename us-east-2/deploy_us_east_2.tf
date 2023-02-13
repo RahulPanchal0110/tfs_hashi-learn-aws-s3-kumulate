@@ -11,7 +11,7 @@ module "kfdm" {
   github_owner        = var.github_owner
   github_team         = var.github_team
   github_branch       = var.github_branch
-  archive_bucket      = "primary.library.news.kfdm.stations"
+  archive_bucket      = "primary.library.news.kfdm.stations" ### existing s3 bucket for archives
   onprem_server       = "kfdm-mtn1.sbgnet.int"
   providers = {
     aws = aws.kfdm
