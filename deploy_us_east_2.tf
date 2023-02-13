@@ -1,9 +1,9 @@
 ################################################################################
-###### US-WEST-2 ###############################################################
+###### US-EAST-2 ###############################################################
 ################################################################################
-module "kabb" {
+module "kfdm" {
   source              = "./modules/complete"
-  aws_account_name    = "kabb"
+  aws_account_name    = "kfdm"
   project             = var.project
   project_description = var.project_description
   github_repo         = var.github_repo
@@ -11,8 +11,8 @@ module "kabb" {
   github_owner        = var.github_owner
   github_team         = var.github_team
   github_branch       = var.github_branch
-  onprem_server      = "kbak-mtn1.sbgnet.int"
+  onprem_server      = "kfdm-mtn1.sbgnet.int"
   providers = {
-    aws = aws.kabb
+    aws = aws.kfdm
   }
 }
