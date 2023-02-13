@@ -32,6 +32,9 @@ variable "env" {
 variable "project" {
   default = "kumulate"
 }
+variable "project_description" {
+  default = "AWS Resources to support Telestream Kumulate on-prem servers"
+}
 variable "asset_owner" {
   type        = string
   description = "Consumer of the asset"
