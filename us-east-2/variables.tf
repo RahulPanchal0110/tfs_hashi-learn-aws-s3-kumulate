@@ -49,7 +49,7 @@ variable "asset_custodian" {
 ######### Git Variables ########################################################
 ################################################################################
 variable "github_repo" {
-  default = "tfs_sbgtv-aws-s3-kumulate"
+  default = "tfs_hashi-learn-aws-s3-kumulate"
 }
 variable "github_org" {
 }
