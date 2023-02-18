@@ -14,7 +14,7 @@ terraform {
     }
   }
   cloud {
-   hostname     = "app.terraform.io" # Optional; defaults to app.terraform.io
+   #hostname     = "app.terraform.io" # Optional; defaults to app.terraform.io
     organization = "hashicorp-learn-phase-1"
     workspaces {
       tags = ["kumulate"]
